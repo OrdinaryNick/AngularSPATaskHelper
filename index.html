@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- Defining our view for angular tutorial -->
+<html ng-app="taskHelper" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoet" content="initial-scale=1, maximum-scale=1 user-scalable=no, width=device-width">
+    <title>Task helper</title>
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<!-- Defining scope of controller -->
+<body ng-controller="HomeViewController">
+<div class="alert alert-success alert-dismissible fade show col=8 align-content-center" role="alert" ng-if="showNotification">
+    {{notification}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<nav class="navbar fixed-top navbar-light bg-light navbar-expand-md">
+    <div class="container">
+        <div class="navbar-header">
+            <span class="navbar-brand">
+                <img class="brand" height="24" src="img/logo.png">
+                {{appTitle}}
+            </span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" ng-click="saveData()"><img src="img/save.png"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ng-click="loadData()"><img src="img/load.png"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <h2>Task</h2>
+    <div class="row">
+        <div class="col-8">
+            <input type="text" class="form-control" ng-model="task.description"/>
+        </div>
+
+        <div class="col-4 align-content-center text-center">
+            <span class="font-weight-bold align-middle line-height-center">{{timeString}} </span>
+            <span class="btn-group float-right" role="group">
+                <button type="button" class="btn btn-info" ng-click="startTimer()"><img src="img/play.png"></button>
+                <button type="button" class="btn btn-warning" ng-click="pauseTimer()"><img src="img/pause.png"></button>
+                <button type="button" class="btn btn-danger" ng-click="resetTimer()"><img src="img/stop.png"></button>
+            </span>
+        </div>
+    </div>
+
+    <!-- Displaying routed pages in this element. -->
+    <div class="row" ng-view>
+    </div>
+</div>
+<script src="js/lib/underscore-min.js"></script>
+<script src="js/lib/jquery-3.3.1.min.js"></script>
+<script src="js/lib/bootstrap.min.js"></script>
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/angular-route.min.js"></script> <!-- For showing views in ng-view -->
+<script src="js/lib/angular-cookies.min.js"></script> <!-- For using cookies -->
+<script src="js/app.js"></script>
+</body>
+</html>

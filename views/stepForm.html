@@ -1,0 +1,28 @@
+<div class="col-3"></div>
+<div class="col-6">
+    <h2 style="padding-top: 2em;">Step</h2>
+    <form name="taskForm">
+        <!-- ng-show only if expression is true -->
+        <div class="alert alert-warning" ng-show="taskForm.$dirty && taskForm.$invalid">
+            Please enter valid values in all required fields.
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Description" ng-model="step.description" required/>
+        </div>
+        <div class="form-group">
+            <input type="number" class="form-control" placeholder="Priority" ng-model="step.priority"/>
+        </div>
+        <div class="form-group">
+            <input type="time" class="form-control" ng-model="step.time"/>
+        </div>
+        <div class="form-group">
+            <!-- Basic form validation by taskForm.isValid() -->
+            <button type="button" class="btn btn-success btn-block" ng-click="save()"><img src="img/ok.png"> Save
+            </button>
+        </div>
+        <div class="form-group">
+            <a href="#steps" class="btn btn-info btn-block">Cancel</a>
+        </div>
+    </form>
+</div>
+<div class="col-3"></div>

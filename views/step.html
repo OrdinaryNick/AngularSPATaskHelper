@@ -1,0 +1,12 @@
+<div class="row align-middle">
+    <span class="col-1 float-left line-height-center">{{step.time | date: "H:mm:ss"}}</span>
+    <span class="col-1 text-red line-height-center">{{step.priority}}</span>
+    <span class="col-8 font-weight-bold line-height-center text-left">{{step.description}}</span>
+    <span class="col-2 float-right">
+    <!-- Passing object attribute to href attribute of element. -->
+    <a href="#!/steps/edit/{{step.id}}" class="btn btn-primary btn-s btn-pull-right"><img src="img/edit.png"
+                                                                                          height="18"></a>
+        <button class="btn btn-danger btn-s btn-pull-right" ng-click="remove(step)"><img height="18"
+                                                                                         src="img/remove.png"></button>
+    </span>
+</div>

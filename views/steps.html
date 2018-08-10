@@ -1,0 +1,11 @@
+<div id="steps" class="col-12">
+    <h2>Steps</h2>
+    <div>
+        <a href="#!/steps/new" class="btn btn-success form-control"><img src="img/add.png" height="24"> Add step</a>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="step in steps | orderBy: 'time'">
+            <task-step></task-step>
+        </li>
+    </ul>
+</div>
