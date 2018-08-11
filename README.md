@@ -7,7 +7,7 @@ The application holds the name of task, measure time of task, CRUD operations ov
 1. Build docker image
 ```docker build -t ordinarynick/angular-spa-task-helper .```
 2. Run docker image
-```docker run -p 80:81 -d ordinarynick/angular-spa-task-helper```
+```docker run -p 80:80 -d ordinarynick/angular-spa-task-helper```
 
 # Project goal
 - Learn programming in Angular.js (version 1.7)
