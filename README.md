@@ -3,8 +3,14 @@ Simple single page application, which help you with tasks. It is programmed in A
 
 The application holds the name of task, measure time of task, CRUD operations over steps and saves its state to cookies and also loads.
 
+# How to run
+1. Build docker image
+```docker build -t ordinarynick/angular-spa-task-helper .```
+2. Run docker image
+```docker run -p 80:81 -d ordinarynick/angular-spa-task-helper```
+
 # Project goal
-- Lear programming in Angular.js (version 1.7)
+- Learn programming in Angular.js (version 1.7)
 - Using Bootstrap 4+
 - Practise in javascript programming
 - Deploying angular.js app in docker
